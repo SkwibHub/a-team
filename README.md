@@ -8,7 +8,11 @@ To kill two birds with one stone, I figured we could play with a list of team na
 Current proposed team names:
 
 A-Team
+
 Hack to the Future
+
 Hack & Morty
+
 Code RED: You Can't Handle The Truth!
+
 Fantictac Four
