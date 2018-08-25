@@ -3,6 +3,15 @@ let ticTac = {
     board : [[null, null, null], [null, null, null], [null, null, null]],
     clear : function () {
         this.board = [[null, null, null], [null, null, null], [null, null, null]];
+        topLeft.innerHTML = '';
+        topMid.innerHTML = '';
+        topRight.innerHTML = '';
+        midLeft.innerHTML = '';
+        midMid.innerHTML = '';
+        midRight.innerHTML = '';
+        botLeft.innerHTML = '';
+        botMid.innerHTML = '';
+        botRight.innerHTML = '';
         return this.board;
     },
     newGame : function () {
@@ -22,53 +31,53 @@ let ticTac = {
         if (this.board[0][0] === this.board[0][1] && this.board[0][0] === this.board[0][2]) {
             if (this.board[0][0] != null && this.board[0][1] != null && this.board[0][2] != null) {
                 alert(this.board[0][0] + ' is the winner!');
-                newGame ();
+                this.newGame ();
             }
         }
         else if (this.board[1][0] === this.board[1][1] && this.board[1][0] === this.board[1][2]) {
             if (this.board[1][0] != null && this.board[1][1] != null && this.board[1][2] != null) {
                 alert(this.board[1][0] + ' is the winner!');
-                newGame ();
+                this.newGame ();
             }
         }
         else if (this.board[2][0] === this.board[2][1] && this.board[2][0] === this.board[2][2]) {
             if (this.board[2][0] != null && this.board[2][1] != null && this.board[2][2] != null) {
                 alert(this.board[2][0] + ' is the winner!');
-                newGame ();
+                this.newGame ();
             }
         }
         else if (this.board[0][0] === this.board[1][0] && this.board[0][0] === this.board[2][0]) {
             if (this.board[0][0] != null && this.board[1][0] != null && this.board[2][0] != null) {
                 alert(this.board[0][0] + ' is the winner!');
-                newGame ();
+                this.newGame ();
             }
         }
         else if (this.board[0][1] === this.board[1][1] && this.board[0][1] === this.board[2][1]) {
             if (this.board[0][1] != null && this.board[1][1] != null && this.board[2][1] != null) {
                 alert(this.board[0][1] + ' is the winner!');
-                newGame ();
+                this.newGame ();
             }
         }
         else if (this.board[0][2] === this.board[1][2] && this.board[0][2] === this.board[2][2]) {
             if (this.board[0][2] != null && this.board[1][2] != null && this.board[2][2] != null) {
                 alert(this.board[0][2] + ' is the winner!');
-                newGame ();
+                this.newGame ();
             }
         }
         else if (this.board[0][0] === this.board[1][1] && this.board[0][0] === this.board[2][2]) {
             if (this.board[0][0] != null && this.board[1][1] != null && this.board[2][2] != null) {
                 alert(this.board[0][0] + ' is the winner!');
-                newGame ();
+                this.newGame ();
             }
         }
         else if (this.board[0][2] === this.board[1][1] && this.board[0][2] === this.board[2][0]) {
             if (this.board[0][2] != null && this.board[1][1] != null && this.board[2][0] != null) {
                 alert(this.board[0][2] + ' is the winner!');
-                newGame ();
+                this.newGame ();
             }
         }
         else {
-            return nextTurn();
+            return isBoardFull(ticTac);
         }
         }
     
@@ -87,8 +96,8 @@ let start = document.getElementById('start');
 let reset = document.getElementById('reset');
 
 function createInput (x, y) {
-    x.innerHTML = userXO;
     addToArray(y);
+    x.innerHTML = userXO;
     alternateUser();
     ticTac.winConditions();
 } 
@@ -150,6 +159,9 @@ botMid.addEventListener('click', function(){
 botRight.addEventListener('click', function(){
     createInput(botRight, 'botR')
 });
+reset.addEventListener('click', function() {
+    ticTac.clear();
+});
 
 function alternateUser () {
     if (userXO === 'X') {
@@ -162,3 +174,30 @@ function alternateUser () {
     }
 }
 
+function isBoardFull(boardObject) { //TESTED & WORKS
+    for (r = 0; r < 3; r++) {
+        for (c = 0; c < 3; c++) {
+            if (boardObject.board[r][c] === null) {
+                return false;
+            }
+        }
+    }
+    let drawed = confirm('Draw, play again?'); {
+        if (drawed) {
+            alert('player one start!');
+            board.clear;
+        }
+        else {
+            board.clear
+        }
+    }
+}
+
+function checkConflicts(boardObject, rowNum, colNum, userXO) { // TESTED & WORKS
+    if (boardObject.board[rowNum][colNum] !== null) {
+        userXO = boardObject.board[rowNum][colNum];
+    }
+    return userXO;
+}
+
+//function checkConflicts2
