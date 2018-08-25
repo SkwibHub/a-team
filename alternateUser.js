@@ -1,5 +1,5 @@
 let userXO = 'X';
-function alternateUser () {
+function alternateUser () {  // TESTED & WORKS
     if (userXO === 'X') {
         userXO = 'O';
     }
@@ -7,3 +7,7 @@ function alternateUser () {
         userXO = 'X';
     }
 }
+
+console.log(userXO);
+alternateUser();
+console.log(userXO);
