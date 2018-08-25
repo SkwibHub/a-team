@@ -48,6 +48,6 @@ function winConditions () {
         }
     }
     else {
-        return nextTurn;
+        return nextTurn();
     }
     }
