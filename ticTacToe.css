@@ -1,0 +1,70 @@
+.flex-container{
+    display:flex;
+    
+}
+
+.board-container{
+    height: 100%;
+    width: 100%;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    border: 2px solid lightgreen;
+    display: inline-block;
+    background-position: center;
+    background-size: 150px;
+}
+
+#square1{
+    
+}
+
+
+.square:hover{
+    background-color: floralwhite;
+    opacity: 0.5;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.board{
+    width: 618px;
+    /* background-color: grey; */
+}
+
+
+.start{
+    width: 100px;
+    height: 40px;
+    /* margin-right: 200px; */
+}
+
+.reset{
+    width: 100px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
