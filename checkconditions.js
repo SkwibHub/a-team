@@ -19,10 +19,12 @@ function isBoardFull(boardObject) { //TESTED & WORKS
 }
 
 
-// Testing
+/* Testing
 
 let ttBoard = {
     board: [["O",null,"X"],["X","O",null],[null,"X",null]]
 }
 
 console.log(checkConflicts(ttBoard,1,1,"X"));
+
+*/
