@@ -8,6 +8,11 @@ function alternateUser () {  // TESTED & WORKS
     }
 }
 
+<<<<<<< HEAD
 console.log(userXO);
 alternateUser();
+=======
+alternateUser();
+
+>>>>>>> rob
 console.log(userXO);

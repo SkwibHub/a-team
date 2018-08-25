@@ -19,4 +19,5 @@ let ticTac = {
     }
 }
 
-
+ticTac.board[0][0] = 'number2';
+console.log(ticTac.board[0][0]);
