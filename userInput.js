@@ -8,48 +8,56 @@ let botLeft = document.getElementById();
 let botMid = document.getElementById();
 let botRight = document.getElementById();
 
-function createInput (x) {
-    x.innerHTML = userXO;
-    addToArray (x);
-    alternateUser();
+/*let userXO ='X';
+let ticTac = {
+    board : [[null, null, null], [null, null, null], [null, null, null]],
 }
 
+function createInput (x, y) {
+    x.innerHTML = userXO;
+    addToArray (y);
+    alternateUser();
+} */
+
 function addToArray (x) {
-    if (x === topLeft) {
+    if (x === 'topL') {
         this.board[0][0] = userXO;
     }
-    else if (x === topMid) {
+    else if (x === 'topM') {
         this.board[0][1] = userXO;
     }
-    else if (x === topRight) {
+    else if (x === 'topR') {
         this.board[0][2] = userXO;
     }
-    else if (x === midLeft) {
+    else if (x === 'midL') {
         this.board[1][0] = userXO;
     }
-    else if (x === midMid) {
+    else if (x === 'midM') {
         this.board[1][1] = userXO;
     }
-    else if (x === midRight) {
+    else if (x === 'midR') {
         this.board[1][2] = userXO;
     }
-    else if (x === botLeft) {
+    else if (x === 'botL') {
         this.board[2][0] = userXO;
     }
-    else if (x === botMid) {
+    else if (x === 'botM') {
         this.board[2][1] = userXO;
     }
-    else if (x === botRight) {
+    else if (x === 'botR') {
         this.board[2][2] = userXO;
     }
 }
 
-topLeft.addEventListener('click', createInput(topLeft));
-topMid.addEventListener('click', createInput(topMid));
-topRight.addEventListener('click', createInput(topRight));
-midLeft.addEventListener('click', createInput(midLeft));
-midMid.addEventListener('click', createInput(midMid));
-midRight.addEventListener('click', createInput(midRight));
-botLeft.addEventListener('click', createInput(botLeft));
-botMid.addEventListener('click', createInput(botMid));
-botRight.addEventListener('click', createInput(botRight));
+topLeft.addEventListener('click', createInput(topLeft, 'topL'));
+topMid.addEventListener('click', createInput(topMid, 'topM'));
+topRight.addEventListener('click', createInput(topRight, 'topR'));
+midLeft.addEventListener('click', createInput(midLeft, 'midL'));
+midMid.addEventListener('click', createInput(midMid, 'midM'));
+midRight.addEventListener('click', createInput(midRight, 'midR'));
+botLeft.addEventListener('click', createInput(botLeft, 'botL'));
+botMid.addEventListener('click', createInput(botMid, 'botM'));
+botRight.addEventListener('click', createInput(botRight, 'botR'));
+
+createInput(topLeft);
+console.log(ticTac[0][0]);
