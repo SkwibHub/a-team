@@ -8,10 +8,12 @@ let ticTac = {
         let runItBack = confirm('Would you like to play again?'); {
             if (runItBack) {
                 this.clear;
+                userXO = 'X';
             }
             else {
                 alert("Thank you for playing!");
-                this.clear
+                this.clear;
+                userXO = 'X';
             }
         }
     }
