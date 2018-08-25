@@ -7,3 +7,7 @@ function alternateUser () {
         userXO = 'X';
     }
 }
+
+alternateUser();
+
+console.log(userXO);
