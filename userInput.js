@@ -1,23 +1,18 @@
-let topLeft = document.getElementById();
-let topMid = document.getElementById();
-let topRight = document.getElementById();
-let midLeft = document.getElementById();
-let midMid = document.getElementById();
-let midRight = document.getElementById();
-let botLeft = document.getElementById();
-let botMid = document.getElementById();
-let botRight = document.getElementById();
-
-/*let userXO ='X';
-let ticTac = {
-    board : [[null, null, null], [null, null, null], [null, null, null]],
-}
+let topLeft = document.getElementById('square1');
+let topMid = document.getElementById('square2');
+let topRight = document.getElementById('square3');
+let midLeft = document.getElementById('square4');
+let midMid = document.getElementById('square5');
+let midRight = document.getElementById('square6');
+let botLeft = document.getElementById('square7');
+let botMid = document.getElementById('square8');
+let botRight = document.getElementById('square9');
 
 function createInput (x, y) {
     x.innerHTML = userXO;
     addToArray (y);
     alternateUser();
-} */
+} 
 
 function addToArray (x) {
     if (x === 'topL') {
