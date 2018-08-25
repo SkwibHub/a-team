@@ -46,7 +46,7 @@ let ticTac = {
             }
         }
         else {
-            nextTurn;
+            nextTurn();
         }
         }
     }
