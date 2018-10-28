@@ -21,11 +21,6 @@
     background-size: 150px;
 }
 
-#square1{
-    
-}
-
-
 .square:hover{
     background-color: floralwhite;
     opacity: 0.5;
@@ -42,24 +37,56 @@
 
 .board{
     width: 618px;
-    /* background-color: grey; */
 }
-
 
 .start{
     width: 100px;
     height: 40px;
-    /* margin-right: 200px; */
+    border-radius: 15px;
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightgreen;
+    border: none;
 }
 
 .reset{
     width: 100px;
     height: 40px;
     margin-bottom: 10px;
+    border-radius: 15px;
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: lightgreen;
+    border: none;
+}
+
+h1{
+    color: #800000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.css-selector {
+    font-family: 'Play', sans-serif;
+    font-size: 45px;
+}
+
+.spaceship1 {
+    background: url('https://raw.githubusercontent.com/SkwibHub/skwibhub.github.io/master/spaceship-red.png');
+}
+
+.spaceship2 {
+    background: url('https://raw.githubusercontent.com/SkwibHub/skwibhub.github.io/master/spaceship-yellow.png');
 }
 
 
-
+body {
+    font-size: 150px;
+    text-align: center;
+    
+}
 
 
 
